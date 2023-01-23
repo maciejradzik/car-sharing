@@ -598,7 +598,9 @@ h5{
     height:140px;
     z-index: 0;
     margin-bottom: 20px;
+    vertical-align: top;
 }
+
 
 input:focus{
     /*background: #FFFFFF 0% 0% no-repeat padding-box;*/
@@ -617,13 +619,33 @@ input[type="email"]:focus-visible {
     outline: none;
 }
 
+input[type="text"]{
+    font-family: "Nunito Sans";
+    color: red;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+input[type="email"]{
+    font-family: "Nunito Sans";
+    color: red;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
 input::placeholder{
     font-family: "Nunito Sans";
     font-size: 16px;
     color: #B2B2B2;
-    margin-left: 200px;
-    padding-left:10px;
+}
 
+/*input[type="text"]{*/
+/*    transform: translateY(-50px);*/
+/*}*/
+
+.input3 input::placeholder{
+    /*line-height: 90px;*/
+    transform: translateY(-50px);
 }
 
 .input4{
@@ -638,10 +660,6 @@ input::placeholder{
 
 }
 
-.Checkbox input{
-    box-shadow: none;
-}
-
 .Checkbox span{
     text-align: left;
     font-family:"open sans";
@@ -651,12 +669,35 @@ input::placeholder{
     color: #B2B2B2;
     opacity: 1;
     margin-left: 10px;
-    border: red;
+    width: 412px;
 }
 
-.Checkbox input:checked{
-    background-color: red;
+input[type=checkbox]{
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    opacity: 1;
+    box-shadow: none;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+input[type=checkbox]:checked:after{
+    width: 13px;
+    height: 13px;
+    content: "";
+    background-image: url("../images/Icon Check.svg");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .send-btn{
     width: 142px;
@@ -674,6 +715,10 @@ input::placeholder{
     font-size: 14px;
     color: #FF0000;
     text-transform: uppercase;
+}
+
+form{
+    margin-left: 20px;
 }
 
 /*FOOTER*/
